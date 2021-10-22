@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'charter';
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'charter';
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'charter';
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'charter';
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+:root { /*pseudoclase */
+    font-size: 16px;
+    --gray40: #212121;
+    --gray30: #212429;
+    --gray20: #424242;
+    --gray10: #616161;
+}
+
+
+body {
+    color: var(--gray40);    
+    /* font-family: system-ui; */
+    /* font-family: charter; */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+a {
+    color: var(--gray40);
+}
+
+header {
+    font-size: 14px;
+    color: var(--gray10);
+}
+
+header a {
+    color: var(--gray10);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--gray40);
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3.75em;
+    margin: 64px 0 16px 0;
+}
+
+h1 + p {
+    /* margin-bottom: 64px; */
+}
+hr {
+    margin: 64px 0;
+}
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 16px 0 24px 0;
+    font-weight: normal;
+}
+
+pre {
+    background: #FEC62E;
+}
+
+blockquote {
+    margin: 32px 0;
+}
+
+.hero {    
+    
+    background: linear-gradient(to top, rgba(255,255,255,.3), transparent  ), url('../images/pattern.png');
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    height: 350px;
+}
+
+h3::after {
+    content: '';
+    width: 192px;
+    height: 4px;
+    background: var(--gray20);
+    display: inline-block;
+}
+.section-content + hr {
+    display: none;
+}
+.section-content img {
+    margin-top: 40px;
+}
+
+.section-content {
+    counter-reset: listCounter;
+}
+
+.section-content h3::before {
+
+    content: counter(listCounter);
+    counter-increment: listCounter;
+
+}
