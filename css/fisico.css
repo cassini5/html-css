@@ -30,6 +30,10 @@
     --gray10: #616161;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--gray40);    
     /* font-family: system-ui; */
@@ -45,11 +49,20 @@ a {
 header {
     font-size: 14px;
     color: var(--gray10);
+    position: absolute;
+    top: 64px;
+    left: -232px;
+    /* background-color: red; */
+    width: 188px;
 }
 
 header a {
     color: var(--gray10);
     text-decoration: none;
+}
+
+header li {
+    margin-bottom: 16px;
 }
 
 header a:hover{
@@ -58,10 +71,12 @@ header a:hover{
 
 nav details summary {
     font-weight: bold;
+    line-height: 24px;
 }
 
 h1 {
     font-size: 3.75em;
+    font-weight: 400;
     margin: 64px 0 16px 0;
 }
 
@@ -82,6 +97,9 @@ h3 {
     font-size: 1.5em;
     margin: 16px 0 24px 0;
     font-weight: normal;
+    position: sticky;
+    top:0;
+    background-color: #fff;
 }
 
 pre {
@@ -105,6 +123,14 @@ blockquote {
     content: '-';
 }
 
+.header {    
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+    position: relative;
+}
 .main {
     
 }
@@ -115,7 +141,7 @@ blockquote {
 }
 
 .main-content {
-
+    background-color: #fff;
 }
 
 .hero {    
@@ -162,7 +188,7 @@ blockquote {
 }
 
 .section-content h3 {    
-    padding-bottom: 4px;
+    padding-bottom: 8px;
 }
 
 .section-content h3::before {
@@ -174,8 +200,11 @@ blockquote {
 
 .section-content h3::after {
     content: '';
-    width: 32px;
+    width: 80px;
     height: 4px;
     background-color: var(--gray30);
     display: inline-block;
+    position: absolute;
+    left:0;
+    bottom:0;
 }

@@ -5,42 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso esencial de HTML y CSS</title>
-    <link rel="stylesheet" href="./css/fisico.css">
+    <!-- <link rel="stylesheet" href="./css/fisico.css"> -->
+    <link rel="stylesheet" href="./css/logico.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
 </head>
 <body>    
     <div class="hero"></div>
-    <header>
-        <nav>
-            <details open>
-                <summary>
-                    Setup
-                </summary>
-                <ol>
-                    <li><a href="#google-chrome">Google Chrome</a></li>
-                    <li><a href="#vsco">Visual Studio Code</a></li>
-                    <li><a href="#figma">Figma</a></li>
-                    <li><a href="#gitub">GitHub</a></li>
-                </ol>
-            </details>
-            <details>
-                <summary>
-                    Conceptos Esenciales del Desarrollo Web
-                </summary>
-                <ol>
-                    <li><a href="#html">Qué es HTML</a></li>
-                    <li><a href="#etiquetas">Etiquetas</a></li>
-                    <li><a href="#dom">DOM</a></li>
-                    <li><a href="#semantica">Semántica</a></li>
-                    <li><a href="#atributos">Atributos</a></li>
-                    <li><a href="#css">Qué es CSS</a></li>
-                </ol>
-            </details>
-        </nav>
-    </header>
+    
+    <div class="header">
+        <div class="wrapper">
+            <div class="header-content">
+                <header>
+                    <nav>
+                        <details open>
+                            <summary>
+                                Setup
+                            </summary>
+                            <ol>
+                                <li><a href="#google-chrome">Google Chrome</a></li>
+                                <li><a href="#vsco">Visual Studio Code</a></li>
+                                <li><a href="#figma">Figma</a></li>
+                                <li><a href="#github">GitHub</a></li>
+                            </ol>
+                        </details>
+                        <details open>
+                            <summary>
+                                Conceptos Esenciales del Desarrollo Web
+                            </summary>
+                            <ol>
+                                <li><a href="#html">Qué es HTML</a></li>
+                                <li><a href="#etiquetas">Etiquetas</a></li>
+                                <li><a href="#dom">DOM</a></li>
+                                <li><a href="#semantica">Semántica</a></li>
+                                <li><a href="#atributos">Atributos</a></li>
+                                <li><a href="#css">Qué es CSS</a></li>
+                            </ol>
+                        </details>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    </div>
+
     <main class="main"> <!-- contenedor padre -->
+        
         <div class="wrapper"> <!-- delimita fronteras del contenido y centrar contenido -->
             <div class="main-content"> <!-- contenido -->
                 <!-- <blockquote> -->
@@ -71,8 +85,6 @@
                 <hr>        
                 <section class="section-content">
 
-                    
-                
                     <h2>Conceptos esenciales del Desarrollo Web</h2>
                     <h3 id="html">Qué es HTML</h3>
                     <p>Hyper Text Markup Language o Lenguaje de marcas Hipertexto. Es el componente más básico de la web. Define el significado y la estructura del contenido.</p>
