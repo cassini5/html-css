@@ -55,19 +55,9 @@ a {
 }
 
 header {
+    margin-block-start: 20px;
     font-size: 14px;
-    color: var(--white);
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: -208px;
-    inline-size: 188px;
-    /*
-    inset-inline-start: ; left
-    insert-inline-end: ; right
-    inset-block-start: ; top
-    insert-block-end: ; bottom
-    */    
-
+    color: var(--white);    
 }
 
 header li {
@@ -95,8 +85,8 @@ h1, h2, h3 {
     /* font-weight: 400; */
 }
 h1 {
-    font-size: 3.75em;
-    margin-block-start: 64px;
+    font-size:40px;
+    margin-block-start: 20px;
     margin-block-end: 16px;
     /*
     text-align: start; left
@@ -173,22 +163,11 @@ blockquote p {
 }
 
 .header {    
-    position: sticky;
-    inset-block-start: -45px;
-    /* position: sticky;
-    top: 0; */
 
-    /*position: absolute;
-    background-color: red;
-    inset: 0;
-    inset-inline: left right
-    inset-block: top bottom
-    */
 }
 
 .header-content {
-    position: relative;
-    inset-block-start: 65px;
+    padding-inline: 20px;
 }
 .main {
     
@@ -209,7 +188,8 @@ blockquote p {
     /* background-repeat: no-repeat;
     background-position: center;
     background-size: cover; */
-    height: 350px;
+    /* height: 350px; */
+    block-size: 50px;
 }
 
 .section-content {
@@ -289,4 +269,94 @@ blockquote p {
     /* border:1px solid blue; */
     /* padding: 1em; */
     padding-inline: 16px; /*padding left | right*/
+}
+
+.slider {
+    
+}
+
+.slider-container {
+    block-size: 100px;
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;    
+    font-size: 0;
+}
+
+.video {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;    
+    aspect-ratio: 16/9;
+}
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 10px;
+}
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.form input {
+    inline-size: 100%;
+    border: 1px solid var(--white30);
+    background: #251F24;
+    box-sizing: border-box;
+    border-radius: .5em;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color:var(--white30);
+    display: block;
+    font-size: 1em;
+    margin-block-end: 1.5em;
+}
+
+.form input[type='submit']{
+    background: #157EFB;
+    border: none;
+}
+.form input[type='submit']:hover{
+    cursor: pointer;
+}
+
+.form input::-webkit-input-placeholder{
+    color:var(--white20);
+}
+
+@media screen and (min-width:1366px){
+    .hero {
+        block-size: 350px;
+    }
+    .header {    
+        position: sticky;
+        inset-block-start: -45px;
+    }
+    
+    .header-content {
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+
+    header {
+        font-size: 14px;
+        color: var(--white);
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        inline-size: 188px;    
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+
 }
