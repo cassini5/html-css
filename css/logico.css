@@ -35,7 +35,7 @@ body {
     /* font-family: system-ui; */
     /* font-family: charter; */
     font-family: 'Nunito', sans-serif;    
-    background-color: #251F24;
+    background-color: #251F24;    
     margin:0;
 
     /*
@@ -276,9 +276,10 @@ blockquote p {
 }
 
 .slider-container {
-    block-size: 100px;
+    /* block-size: 100px; */
+    /* overflow: auto; */
     display: block;
-    overflow: auto;
+    overflow: hidden;
     scroll-behavior: smooth;
     white-space: nowrap;    
     font-size: 0;

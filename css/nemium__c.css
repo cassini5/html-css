@@ -1,0 +1,342 @@
+:root {
+    font-size: 16px;
+    --gris50: #212121;
+    --gris40: #424242;
+    --gris30: #616161;
+    --gris20: #C4C4C4;
+    --gris10: #E5E5E5;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 70.31px;
+    margin:0;    
+}
+
+p {
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--gris40);
+}
+
+summary {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gris30);
+    margin-block-end: 16px;
+}
+
+summary:last-child {
+    /* color:red; */
+}
+
+header li a, ::marker {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--gris30);
+    text-decoration: none;
+}
+
+header li {
+    margin-block-end: 16px;
+}
+
+header li a:nth-child(2) {
+    /* color: red; */
+}
+
+hr {
+    margin-block: 64px;
+    border: 1px solid rgba(97,97,97,.2);
+}
+
+h1, h2 {
+    color: var(--gris50);
+    font-weight: 400;    
+}
+
+h2 {
+    font-size: 24px;
+    margin-block-end: 40px;
+    line-height: 37.5px;
+}
+
+h3 {
+    margin-block: 16px;
+    color: var(--gris40);
+    font-size: 24px;
+    line-height: 28.13px;
+    font-weight: normal;
+}
+
+.nav-content {
+    border-inline-start: 4px solid var(--gris20);
+    padding-inline-start: 16px;
+}
+
+.header-content p {
+    margin-block-start: 16px;
+    margin-block-end: 64px;
+}
+
+.header .wrapper {    
+}
+
+.header {    
+    margin-block-start: 40px;
+}
+
+.wrapper {
+    max-inline-size: 966px;
+    padding-inline: 16px;
+    margin: auto;
+}
+
+.section-content {
+    counter-reset: listCounter;
+}
+
+.section-content h3::before{
+    content: counter(listCounter,decimal) '. ';
+    counter-increment: listCounter;
+}
+/* main section:nth-child(1){ NO ENTIENDO PORQUE NO ME FUNCIONA ESTE SELECTOR EN ELEMENTOS ANIDADOS, GRACIASS!!! :D */
+main section:first-of-type img{
+    margin-block-start: 40px;
+}
+
+.section-content img {
+    max-inline-size: 100%;
+}
+
+blockquote {
+    margin-block: 40px;
+    margin-inline: 0;
+    padding-inline-start: 16px;
+    border-inline-start: 4px solid var(--gris50);
+}
+
+blockquote p {
+    line-height: 32px;
+    font-size:24px;
+    color:var(--gris40);
+}
+
+blockquote p:nth-child(2){
+    color: var(--gris30);
+}
+
+blockquote p:nth-child(2)::before{
+    content: '- ';
+}
+
+hr:last-of-type{
+    display:none;
+}
+
+pre {
+    background-color: var(--gris10);
+    padding-block: 40px;
+    padding-inline: 40px;
+    line-height: 24px;
+    color: var(--gris40);
+    font-size: 16px;
+    margin-block: 0;
+    overflow: auto;
+}
+
+.section-content:nth-of-type(2) h3{    
+    margin-block-start: 40px;
+    margin-block-end: 24px;
+    color: var(--gris40);
+    font-size: 24px;
+    line-height: 28.13px;
+}
+
+.section-content:nth-of-type(2) img {
+    inline-size: 100%;
+}
+
+.section-content:nth-of-type(3){
+    margin-block-start: 162.53px;
+    /* background-color: red; */
+}
+
+.section-content:nth-of-type(3) h2 {
+    font-size: 32px;
+    line-height: 37.5px;
+}
+.section-content:nth-of-type(3) h3 {
+    margin-block-start: 40px;
+}
+.section-content:nth-of-type(3) h3::before {
+    content: '';
+}
+
+.section-content:nth-of-type(3) ol, .section-content:nth-of-type(3) ul {
+    padding-inline-start: 16px;    
+    color: var(--gris40);
+    line-height: 24px;
+}
+
+.section-content:nth-of-type(3) ol li::marker {    
+    font-size: 16px;
+}
+
+.section-content:nth-of-type(3) ul li{
+    padding-block-end: 16px;
+    padding-inline-start: 16px;
+}
+
+div.section-content:first-of-type {
+    
+}
+
+div.section-content:first-of-type h2, div.section-content:last-of-type h2 {
+    margin-block-start: 40px;
+    margin-block-end: 16px;
+    font-size: 24px;
+    line-height: 28.13px;
+    color: var(--gris40);    
+}
+
+div.section-content:last-of-type {    
+    margin-block-end: 80px;
+}
+
+.slider-container {
+    /* background-color: red; */
+    display: block;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;    
+    font-size: 0; 
+   
+}
+
+.video {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;     
+}
+
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 8px;
+}
+
+.slider-bullet {
+    background: rgba(66,66,66,.2);
+    display: inline-block;
+    border-radius: 50%;
+    inline-size:16px;
+    block-size: 16px;
+    text-decoration: none;     
+}
+.slider-bullet:hover{
+    background: var(--gris40);
+}
+
+.main-content p > a {
+    color: var(--gris50);
+    line-height: 24px;
+}
+.form input {
+    padding-inline: 16px;
+    padding-block: 12px;
+    box-sizing: border-box;
+    /* display: inline-block; */    
+    /* inline-size: 280px; */
+    inline-size: 100%;
+    block-size: 48px;
+    border: 1px solid var(--gris30);
+    color: var(--gris40);    
+    border-radius: 90px;    
+    margin-block-end: 16px;
+}
+
+input[type='text'] {
+    margin-inline-end: 16px;
+    display: block;
+}
+input[type='email'] {
+    display: inline-block;
+    /* inline-size: 75%; */
+    /* inline-size: 80%;
+    min-inline-size: 400px; */
+    /* border-start-start-radius: 90px;
+    border-end-start-radius: 90px; */
+}
+
+input[type='submit']{
+    cursor: pointer;
+    display: inline-block;
+    inline-size: 115px;
+    border: none;    
+    background-color: #000;
+    color: #fff;
+    border-radius: 90px;
+    /* position: relative;
+    left: -115px; */
+}
+
+.form input::-webkit-input-placeholder {    
+    font-size: 16px;
+}
+.footer {
+    background-color: #212429;
+    text-align: center;
+}
+
+footer p {
+    color: #fff;
+    font-size: 32px;
+    line-height: 37.5px;
+    margin: 0;
+    padding-block-start: 48px;
+    padding-block-end: 19px;
+}
+
+footer img {
+    padding-block-end: 51px;
+}
+
+@media screen and (min-width:967px){    
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    blockquote {
+        margin-block: 80px;
+    }
+    .section-content:nth-of-type(2) h3{            
+        margin-block-end: 16px;
+    }
+    .header {    
+        margin-block-start: 80px;
+    }
+    .wrapper {
+        padding-inline: 0;
+    }
+    .form input { 
+        display: inline-block;    
+        inline-size: 280px;
+    }
+    input[type='submit'] {
+        inline-size: 119px;
+        position: relative;
+        left: -50px;
+    }
+}
