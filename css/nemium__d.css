@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik/Rubik-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik/Rubik-Bold.ttf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+:root {
+    font-size: 16px;
+    --morado: #5551FF;
+}
+
+html {
+    
+}
+
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+summary {
+    font-weight: 700;
+}
+
+summary, nav li {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+nav {
+    inline-size: 208px;
+}
+
+nav li {}
+
+nav li a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+    block-size: 40px;
+    padding-inline: 8px;
+    padding-block: 8px;
+    margin-block-end: 16px;
+}
+
+nav li a:hover {    
+    background-color: var(--morado);
+    color: #fff;
+}
+
+.hero {
+    inline-size: 100%;
+    block-size: 350px;
+    background: linear-gradient(to left, #4A00E099, #8E2DE280), url('../images/pattern2.png');
+}
