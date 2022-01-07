@@ -13,6 +13,7 @@
 }
 
 :root {
+    scroll-behavior: smooth;
     font-size: 16px;
     --morado20: #5551FF;
     --morado10: #ABAAF6;
@@ -39,13 +40,17 @@ summary, nav li {
 
 nav {
     inline-size: 208px;    
-    position: absolute;
-    inset-inline-end: -232px;
 }
 
 nav ol {
-    padding-inline-start: 20px;
+    padding-inline-start: 0;
+    list-style-type: none;
+    /* list-style-position: inside; */
 }
+
+/* nav ol::marker {
+    display: inline;
+} */
 
 nav li {}
 
@@ -57,18 +62,28 @@ nav li a {
     block-size: 40px;
     padding-inline: 8px;
     padding-block: 8px;
-    margin-block-end: 16px;        
+    margin-block-end: 16px;
 }
 
-nav li a:hover {    
+nav li a:hover {
     background-color: var(--morado20);
     color: #fff;
 }
 
+.header-content {
+    padding-inline: 16px;
+    position: relative;
+    inset-block-start: 48px;
+}
+
+.main-content {
+    padding-inline: 16px;
+}
+
 h1 {
     font-weight: 700;
-    font-size: 60px;
-    line-height: 71.1px;
+    font-size: 28px;    
+    line-height: 33.18px;
     margin-block-end: 16px;
     margin-block-start: 64px;
 }
@@ -82,8 +97,8 @@ h2 {
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 28.44px;
+    font-size: 22px;
+    line-height: 28.07px;
     font-weight: 400;
 }
 
@@ -97,15 +112,9 @@ hr {
     margin-block: 64px;;
 }
 
-.header-content {
-    margin-block-start:48px;
-    position:relative;
-    background:red;
-}
-
 .hero {
     inline-size: 100%;
-    block-size: 350px;
+    block-size: 96px;
     background: linear-gradient(to left, #4A00E099, #8E2DE280), url('../images/pattern2.png');
 }
 
@@ -282,6 +291,7 @@ input[type=text], input[type=email]{
     block-size: 48px;
     box-sizing: border-box;
     font-size: 16px;
+    margin-block-end: 16px;
 }
 
 input[type=text]{
@@ -300,7 +310,6 @@ input[type=submit]{
     font-size: 16px;
     color: #fff;
     position:relative;
-    left: -50px;
 }
 
 .footer {
@@ -316,10 +325,50 @@ footer {
 
 .footer p {
     color: #fff;
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 28.13px;
     padding-block-start: 48px;
     padding-block-end: 16px;
     margin: 0;
 }
+@media screen and (min-width: 739px) { 
+    input[type=submit]{        
+        inset-inline-start: -50px;
+    }
+}
 
+@media screen and (min-width: 1344px){
 
+    nav {
+        position: absolute;
+        inset-inline-end: -232px;
+    }
+
+    h1 {
+        font-size: 60px;
+        line-height: 71.1px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 28.44px; 
+    }
+
+    input[type=submit]{        
+        /* inset-inline-start: -50px; */
+    }
+
+    .footer p {
+        font-size: 32px;
+        line-height: 37.92px;
+    }
+
+    .header {
+        position: sticky;
+        inset-block-start: 0px;
+    }    
+
+    .hero {
+        block-size: 350px;
+    }
+}
